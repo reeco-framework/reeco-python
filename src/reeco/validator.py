@@ -121,9 +121,9 @@ class Validator:
                 # reuses-software
                 Optional('reuses'): Or(str, list),
                 # serves-data
-                Optional('serves-data'): Or(str, list),
+                Optional('serves'): Or(str, list),
                 # produces-data
-                Optional('produces-data'): Or(str, list),
+                Optional('produces'): Or(str, list),
                 # reused-in
                 Optional('reused-in'): Or(str, list),
                 # generated-by
@@ -150,7 +150,7 @@ class Validator:
         ]
 
         self._componentWarnings = [
-            {'bibliography': And([{}],error="Components should have an associated bibliography")}
+            {'bibliography': And(list,error="Components should have an associated bibliography")}
         ]
     
     def _validate(self, annotations, validators):
