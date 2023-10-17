@@ -134,10 +134,10 @@ class Validator:
                 # published-in
                 Optional('published-in'): Or(str, list),
                 # main-publication
-                Optional('main-publication'): str),
+                Optional('main-publication'): str,
                 Optional('publication'): Or(str, list),
                 # main-report
-                Optional('main-report'):  str),
+                Optional('main-report'):  str,
                 # deliverable-document
                 Optional('deliverable-document'):  Or(str, list),
             }]}, # ,error="Invalid or malformed annotation")
