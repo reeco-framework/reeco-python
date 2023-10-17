@@ -130,16 +130,17 @@ class Validator:
                 Optional('generated-by'): Or(str, list)
             }, error="Invalid or malformed annotation")]},
             # bibliography
-            {Optional('bibliography'): [And({
+            {Optional('bibliography'): [{
                 # published-in
                 Optional('published-in'): Or(str, list),
                 # main-publication
-                Optional('main-publication'): Or(str, list),
+                Optional('main-publication'): str),
+                Optional('publication'): Or(str, list),
                 # main-report
-                Optional('main-report'):  Or(str, list),
+                Optional('main-report'):  str),
                 # deliverable-document
                 Optional('deliverable-document'):  Or(str, list),
-            },error="Invalid or malformed annotation")]},
+            }]}, # ,error="Invalid or malformed annotation")
             # work-package
             {Optional('work-package'): [validateID]},
             # pilot
