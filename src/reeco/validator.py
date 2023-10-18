@@ -114,6 +114,8 @@ class Validator:
                 Optional('persona'): Or(str, list),
                 # documentation
                 Optional('documentation'): Or(str, list),
+                # documentation
+                Optional('derived-from'): Or(str, list),
                 # evaluated-in
                 Optional('evaluated-in'): Or(str, list),
                 # extends-software
