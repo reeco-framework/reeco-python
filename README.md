@@ -1,4 +1,15 @@
-# REECO Python
+---
+component-id: reeco-python-library
+name: "REECO Python Library"
+description: "The Python library of the REECO framework."
+project: reeco-framework
+type: SoftwareLibrary
+credits:
+- Enrico Daga <http://github.com/enridaga>
+resource: https://pypi.org/project/reeco/
+
+---
+# REECO Python Library
 
 Python library for the REECO framework.
 
