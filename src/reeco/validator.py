@@ -31,7 +31,9 @@ class Validator:
         self._containerErrors = [] + both + [
         ## Mandatory items for containers
         # name
-        {'name': str},
+        {'name': And(str, error="This annotation should include a short name, as a single value")},
+        # description
+        {'description': And(str, error="This annotation should include a description, as a single paragraph")},
         {'type': And(lambda v: v in containers, error='Type must be one of: ' + ", ".join(containers) )},
         # container-id
         {'container-id': validateID},
